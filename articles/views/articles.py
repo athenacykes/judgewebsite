@@ -7,6 +7,12 @@ from rest_framework.exceptions import PermissionDenied
 class ArticleViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.ArticleSerializer
     queryset = models.Article.objects.all()
+    keycloak_roles = {
+        'GET': ['default-roles-judge'],
+        'POST': ['default-roles-judge'],
+        'UPDATE': ['default-roles-judge'],
+        'DELETE': ['default-roles-judge'],
+    }
 
     def list(self, request):
         # list of token roles
