@@ -1,0 +1,7 @@
+{% block content %}
+    {% if user.is_authenticated %}
+    {{ user.username }}已登录
+    {% else %}
+    {% include 'users/login.html' %}
+    {% endif %} 
+{% endblock content%}
