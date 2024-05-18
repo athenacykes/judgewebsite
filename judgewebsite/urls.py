@@ -27,5 +27,5 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('upload-image/', UploadImageView.as_view(), name='upload_image'),
-    path('articles/', include('articles.urls'))
+    path('articles/', include('articles.urls')),
 ]
