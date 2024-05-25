@@ -197,3 +197,8 @@ KEYCLOAK_CONFIG = {
     'KEYCLOAK_CACHE_TTL': 60,
     'LOCAL_DECODE': False
 }
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10
+}
