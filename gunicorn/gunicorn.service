@@ -1,0 +1,13 @@
+[Unit]
+Description=gunicorn server
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/root/judgewebsite/gunicorn-server.sh start
+ExecReload=/root/judgewebsite/gunicorn-server.sh restart
+ExecStop=/root/judgewebsite/gunicorn-server.sh stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
