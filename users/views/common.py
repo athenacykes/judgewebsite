@@ -82,3 +82,6 @@ class UploadImageView(View):
         return JsonResponse({
             "location": file_url
         })
+
+
+
